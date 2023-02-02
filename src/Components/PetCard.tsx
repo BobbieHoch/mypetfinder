@@ -11,15 +11,13 @@ export function PetCard(props: PetCardProps) {
     
     return (
         <div className="PetCard">
-            <Card
-  style={{
-    width: '18rem'
-  }}
->
+            <Card style={{width: '18rem' }}>
+
   <img
     alt="Sample"
     src="https://picsum.photos/300/200"
-  />
+  </div>
+      
   <CardBody>
     <CardTitle tag="h5">
       Card title
@@ -37,13 +35,16 @@ export function PetCard(props: PetCardProps) {
       Button
     </Button>
   </CardBody>
-</Card>
+        </Card>
+
+        <div>
             <img src={`/${'props.pet.image'}`}></img>
             <p>{props.pet.name}</p>
             <p>{props.pet.breed}</p>
-           <button onClick={() => isAdopted()}>
+           <button onClick = {() => isAdopted()}>
                 Adopt Me!</button>  {isAdopted ? <p> Found a Forever Home!</p> :
                     
-        </div> )
+        </div>
+    )
 }
 export default PetCard;
